@@ -7,7 +7,16 @@ interface MongooseConnection {
   promise: Promise<Mongoose> | null;
 }
 
+// Declare global variable to avoid using "any"
+declare global {
+    var mongoose: MongooseConnection | undefined;
+  }
+
 let cached: MongooseConnection = (global as any).mongoose
+
+if (!global.mongoose) {
+    global.mongoose = cached;
+  }
 
 if(!cached) {
   cached = (global as any).mongoose = { 
