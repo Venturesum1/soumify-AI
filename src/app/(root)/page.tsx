@@ -1,5 +1,5 @@
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
-import { Component } from 'lucide-react'
+// import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+// import { Component } from 'lucide-react'
 import React from 'react'
 
 const Home = () => {
